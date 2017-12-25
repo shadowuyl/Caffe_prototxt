@@ -1,10 +1,10 @@
 import os
 
 def solve():
-    pre_cls_num=6
-    cls_num=7
+    pre_cls_num=7
+    cls_num=8
     #
-    with open(os.path.join("class-aware","new_train_ohem.prototxt"),"w") as nf:
+    with open(os.path.join("new","class-aware","train_ohem.prototxt"),"w") as nf:
         with open(os.path.join("class-aware","train_ohem.prototxt"),"r") as f:
             lines=f.readlines()
             for line in lines:
@@ -27,7 +27,7 @@ def solve():
                     nf.write(line)
 
     #
-    with open(os.path.join("class-aware","new_test.prototxt"),"w") as nf:
+    with open(os.path.join("new","class-aware","test.prototxt"),"w") as nf:
         with open(os.path.join("class-aware","test.prototxt"),"r") as f:
             lines=f.readlines()
             for line in lines:
@@ -47,7 +47,7 @@ def solve():
                     nf.write(line)
 
     #
-    with open("new_train_agnostic.prototxt","w") as nf:
+    with open(os.path.join("new","train_agnostic.prototxt"),"w") as nf:
         with open("train_agnostic.prototxt","r") as f:
             lines=f.readlines()
             for line in lines:
@@ -61,7 +61,7 @@ def solve():
                     nf.write(line)
 
     #
-    with open("new_train_agnostic_ohem.prototxt","w") as nf:
+    with open(os.path.join("new","train_agnostic_ohem.prototxt"),"w") as nf:
         with open("train_agnostic_ohem.prototxt","r") as f:
             lines=f.readlines()
             for line in lines:
@@ -75,7 +75,7 @@ def solve():
                     nf.write(line)
 
     #
-    with open("new_test_agnostic.prototxt","w") as nf:
+    with open(os.path.join("new","test_agnostic.prototxt"),"w") as nf:
         with open("test_agnostic.prototxt","r") as f:
             lines=f.readlines()
             for line in lines:
